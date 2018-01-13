@@ -1,0 +1,220 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Merriweather:300,400,700");
+html, body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */ }
+
+body > header {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  background-color: #222; }
+  body > header a {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: all 0.2s ease-in-out;
+    color: #FFF;
+    text-decoration: none; }
+    body > header a:hover {
+      background-color: #444; }
+
+body > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2rem;
+  padding-bottom: 10rem;
+  background-color: #FAFAFA; }
+
+body > footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: none;
+  padding: 1rem;
+  background-color: #DDD; }
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -1rem; }
+
+[data-section] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 18rem;
+      flex-basis: 18rem;
+  margin: 0 1rem 2rem;
+  padding: 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
+  background-color: #FFF; }
+
+.status {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1); }
+  .status button {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+    border: 0;
+    background-color: #EEE; }
+
+.speed-input__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer; }
+  .speed-input__container:not(:last-of-type) {
+    margin: 0 0 2rem; }
+
+.speed-input__input {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 1rem 0 0;
+  height: 4rem;
+  width: 4rem; }
+  .speed-input__input input[type="radio"] {
+    position: relative;
+    z-index: 10;
+    display: none; }
+  .speed-input__input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 4rem;
+    background-color: #EEE;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 0 2px #333333 inset; }
+    .speed-input__input label.mild {
+      box-shadow: 0 0 0 4px #388e3c inset; }
+    .speed-input__input label.medium {
+      box-shadow: 0 0 0 4px #ff8f00 inset; }
+    .speed-input__input label.hot {
+      box-shadow: 0 0 0 4px #e53935 inset; }
+  .speed-input__input input:checked + label.mild {
+    background-color: #388E3C;
+    box-shadow: 0 0 0 200px rgba(56, 142, 60, 0.8) inset; }
+  .speed-input__input input:checked + label.medium {
+    background-color: #FF8F00;
+    box-shadow: 0 0 0 200px rgba(255, 143, 0, 0.8) inset; }
+  .speed-input__input input:checked + label.hot {
+    background-color: #e53935;
+    box-shadow: 0 0 0 200px rgba(229, 57, 53, 0.8) inset; }
+
+.speed-input__label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .speed-input__label label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 1rem;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.6rem;
+    color: #555;
+    border-radius: 0.25rem; }
+    .speed-input__label label:hover {
+      color: #222; }
+
+.speed-input__container:hover label[for="speed--mild"] {
+  background-color: rgba(56, 142, 60, 0.1); }
+
+.speed-input__container:hover label[for="speed--medium"] {
+  background-color: rgba(255, 143, 0, 0.1); }
+
+.speed-input__container:hover label[for="speed--hot"] {
+  background-color: rgba(229, 57, 53, 0.1); }
+
+.shots-input__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.shots-input__button {
+  display: block;
+  width: 6rem;
+  border: 0;
+  background-color: #EEE;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #666;
+  transition: all 0.2s ease-in-out; }
+  .shots-input__button:hover {
+    color: #222;
+    background-color: #d0d0d0; }
+
+.shots-input__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  border: 1px solid #DDD; }
+
+/*# sourceMappingURL=maps/app.css.map */

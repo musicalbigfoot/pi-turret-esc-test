@@ -1,0 +1,63 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-title;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+body > header {
+	margin: 0 0 1rem;
+	padding: 0;
+
+	color: #FFF;
+
+	background-color: #222;
+}
+
+body > header a {
+	flex-shrink: 0;
+
+	display: inline-block;
+	padding: 1rem 2rem;
+	transition: all 0.2s ease-in-out;
+
+	color: #FFF;
+	text-decoration: none;
+}
+body > header a:hover {
+	background-color: #444;
+}
+
+
+body > main {
+	flex-grow: 1;
+
+	padding: 1rem;
+}
+
+
+body > footer {
+	flex-shrink: 0;
+
+	padding: 1rem;
+
+	background-color: #DDD;
+}

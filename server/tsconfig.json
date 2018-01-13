@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"noImplicitAny": false
+	},
+	"compileOnSave": false,
+	"filesGlob": [
+		"typings/index.d.ts",
+		"./**/*.ts"
+	],
+	"exclude": [
+		"./node_modules",
+		"./typings"
+	],
+	"files": [
+		"typings/index.d.ts",
+		"./scripts/main.ts"
+	]
+}
